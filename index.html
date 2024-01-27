@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="task">
+        <h1 class="task-title">My Tasks</h1>
+        <form class="task-form" onsubmit="addTask(event)">
+          <span class="material-symbols-outlined"> add_circle </span>
+          <input
+            class="input-field"
+            type="text"
+            placeholder="Add a new task..."
+            id="input"
+          />
+          <button type="submit" class="add-button">Add</button>
+        </form>
+        <div class="task-list">
+          <div class="task-data">
+            <div class="task-details">
+              <p id="taskCount">Total Task</p>
+              <button class="clear-list" onclick="clearAllTask()">
+                Clear List
+              </button>
+            </div>
+          </div>
+          <hr class="hr-tag" />
+          <div id="taskListContainer" class="show-list">
+            <p class="no-task-message">No tasks added</p>
+          </div>
+        </div>
+        <div class="created">
+          <h4>Made with ❤️ By <a href="https://anand8126.github.io/Anand-Profile/" target="_blank">Anand Chaudhary</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
